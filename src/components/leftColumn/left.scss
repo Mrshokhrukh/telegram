@@ -1,0 +1,146 @@
+.left_chatListCont {
+    height: 100%;
+    // overflow-y: scroll;
+    border-right: 1px solid rgb(63, 63, 63);
+}
+
+.left_top {
+    // box-shadow: 0 2px 2px var(--color-light-shadow)
+    box-shadow: 0 2px 2px rgb(0, 0, 0, 0.251);
+    width: 100%;
+
+    .left-header {
+        width: 100%;
+        padding: 0.375rem 0.8125rem 0.5rem 0.8125rem;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 10px;
+
+        .BrgMenu_icon {
+            font-size: 22px;
+            line-height: 0;
+            color: rgb(167, 167, 167);
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: 0.2s ease;
+
+            &:hover {
+                background-color: rgb(46, 46, 46);
+            }
+        }
+
+        .BrgMenu_icon.brg_actived {
+            background-color: rgb(46, 46, 46);
+        }
+
+        #left-topForm {
+            position: relative;
+            width: 100%;
+            border: 1px solid transparent;
+            border-radius: 1.375rem;
+            display: flex;
+            background-color: rgb(46, 46, 46);
+            height: 2.5rem;
+            align-items: center;
+            justify-content: space-between;
+            color: rgb(110, 110, 110);
+            padding: 6px 5px 6px 12px;
+
+            .ioSearch_icon {
+                font-size: 20px;
+                line-height: 0;
+            }
+
+            input {
+                width: 80%;
+                margin-left: 0px;
+                border: none;
+                outline: none;
+                background: transparent;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size: 16px;
+                font-weight: 500;
+                color: white;
+                margin-bottom: 3px;
+            }
+
+            .histories {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                border: 1px solid rgb(110, 110, 110);
+                padding: 2px;
+                cursor: pointer;
+
+                span {}
+            }
+        }
+
+        #left-topForm.focus {
+            border: 1px solid rgb(151, 95, 255);
+
+            .ioSearch_icon {
+                color: rgb(151, 95, 255);
+            }
+        }
+    }
+
+    .head-tablist {
+        padding-left: 10px;
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        flex-wrap: nowrap;
+
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .tab {
+            position: sticky;
+            top: 0;
+            // flex-shrink: 0;
+            padding: 10px 18px;
+            font-size: .875rem;
+            color: rgb(158, 158, 158);
+            font-weight: 500;
+            cursor: pointer;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 2px solid transparent;
+
+            span {
+                width: 20px;
+                height: 20px;
+                background-color: rgb(105, 105, 105);
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                line-height: 0;
+                color: white;
+            }
+
+            &:hover {
+                background-color: rgb(46, 46, 46);
+            }
+        }
+
+        .tab.actived {
+            color: rgb(151, 95, 255);
+            border-bottom: 2px solid rgb(151, 95, 255);
+        }
+    }
+}
+
+.left_chat_list {
+    padding-top: 8px;
+}
