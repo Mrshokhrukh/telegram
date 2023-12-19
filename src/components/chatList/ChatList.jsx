@@ -1,19 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './chatlist.scss';
 import { IoMdCheckmark } from "react-icons/io";
 import { IoCheckmarkDoneSharp } from "react-icons/io5";
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate, useParams, Link } from 'react-router-dom'
 import { change } from '../../redux/chatSlice';
 import { users } from '../../data/data';
+import { fetchUsers } from '../../redux/userSlice';
 const ChatList = () => {
+    let apiData = useSelector((state) => state.user);
     let dispatch = useDispatch()
     let navigate = useNavigate();
     let { userId } = useParams();
 
+    useEffect(() => {
+        dispatch(fetchUsers());
+        console.log(apiData.users);
+    }, [dispatch])
+
     const handleChat = (id) => {
-        dispatch(change(id));
-        navigate(`/chat/${id}`);
+        // dispatch(change(id));
+        // navigate(`/chat/${id}`);
     }
 
     return (

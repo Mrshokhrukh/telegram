@@ -31,6 +31,8 @@ const LeftColumn = () => {
         sidebarFocus.current.className = 'BrgMenu_icon'
     }
 
+    
+
     return (
         <div className='left_chatListCont'>
             <SidebarModal />

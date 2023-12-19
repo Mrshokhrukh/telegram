@@ -1,5 +1,5 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
+import React, { useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
 import './rigth.scss'
 import { useParams } from 'react-router-dom'
 import ChatFormInput from '../chatForm/ChatFormInput'
@@ -7,7 +7,12 @@ import Messages from '../messages/Messages'
 
 const RigthColumn = () => {
   // let chatID = useSelector((state) => state.chat.chatId);
+  let dispatch = useDispatch()
   let { userId } = useParams();
+
+  useEffect(() => {
+    dispatch();
+  }, [])
 
   return (
     <div className="rigthChatColumn_wrapper">
